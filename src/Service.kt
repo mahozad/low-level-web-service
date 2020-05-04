@@ -9,7 +9,7 @@ private const val PORT = 8000
 private const val CONNECTION_END_FLAG = "END"
 private val startTime = Instant.now()
 private val clients = mutableMapOf<Int, MutableList<Pair<String, String>>>()
-private var clientsCount: Int = 0
+private var clientsCount = 0
 
 fun main() {
     val serverSocket = ServerSocket(PORT)
