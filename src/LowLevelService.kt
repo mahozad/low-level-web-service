@@ -69,7 +69,7 @@ class Client(socket: Socket) : Runnable {
         output.appendln("Content-type: text/plain")
         output.appendln("Content-length: ${payload.toByteArray().size}")
 
-        output.newLine() // blank line between headers and content
+        output.newLine() // Required extra newline between headers and payload
 
         output.write(payload)
         output.flush()
