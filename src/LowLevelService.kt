@@ -1,10 +1,12 @@
-import java.io.*
+import java.io.BufferedReader
+import java.io.BufferedWriter
+import java.io.InputStreamReader
+import java.io.OutputStreamWriter
 import java.net.ServerSocket
 import java.net.Socket
 import java.time.Duration
 import java.time.Instant
 import java.time.LocalDate
-import java.time.LocalDateTime
 
 private const val PORT = 8000
 private val startTime = Instant.now()
@@ -64,7 +66,6 @@ class Client(socket: Socket) : Runnable {
 
     private fun writeResponse(payload: String) {
         output.appendln("HTTP/1.1 200 OK")
-        output.appendln("Date: ${LocalDateTime.now()}")
         output.appendln("Content-type: text/plain")
         output.appendln("Content-length: ${payload.toByteArray().size}")
 
