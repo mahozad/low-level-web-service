@@ -41,7 +41,7 @@ class Client(socket: Socket) : Runnable {
 
     private fun index() {
         val payload = """
-            / -> index page
+            / -> Index page
             /uptime -> Get service uptime
             /date -> Get current date
         """
