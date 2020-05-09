@@ -15,13 +15,13 @@ fun main() {
     val serverSocket = ServerSocket(PORT)
     while (true) {
         val socket = serverSocket.accept()
-        val client = Client(socket)
-        val thread = Thread(client)
+        val connection = Connection(socket)
+        val thread = Thread(connection)
         thread.start()
     }
 }
 
-class Client(socket: Socket) : Runnable {
+class Connection(socket: Socket) : Runnable {
 
     private val input = BufferedReader(InputStreamReader(socket.getInputStream()))
     private val output = BufferedWriter(OutputStreamWriter(socket.getOutputStream()))
