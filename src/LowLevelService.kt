@@ -13,6 +13,7 @@ private val startTime = Instant.now()
 
 fun main() {
     val serverSocket = ServerSocket(PORT)
+    println("Listening on port $PORT")
     while (true) {
         val socket = serverSocket.accept()
         val connection = Connection(socket)
