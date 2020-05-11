@@ -8,7 +8,7 @@ import java.time.Duration
 import java.time.Instant
 import java.time.LocalDate
 
-private const val PORT = 8000
+private const val PORT = 8080
 private val startTime = Instant.now()
 
 fun main() {
