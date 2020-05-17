@@ -29,7 +29,7 @@ class Connection(socket: Socket) : Runnable {
 
     override fun run() {
         val requestLine = input.readLine()
-        val path = requestLine.split(" ")[1]
+        val path = requestLine.split(" ").component2()
         dispatch(path)
     }
 
